@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import ctypes
+import os, sys
+os.chdir("./")
+so=ctypes.CDLL("./lagrange.so")
+so.esti_n.restype=ctypes.c_double
+so.esti_n.argtype=[ctypes.c_double]
+so.init_n()
+plt.figure(figsize=(10,5))
+x = np.linspace(0,120, 20000)
+list = []
+for i in x:
+    list.append(so.esti_n(ctypes.c_double(i)))
+    #print(i)
+    #print (list[len(list)-1])
+plt.plot(x,list)
+plt.show()
+print("f(65)=")
+print(so.esti_n(ctypes.c_double(65)))
+#y=so.esti(x,200)
