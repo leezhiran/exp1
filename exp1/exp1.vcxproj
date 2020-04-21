@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CIR.cpp" />
     <ClCompile Include="Hermite.cpp" />
     <ClCompile Include="lagrange.cpp" />
     <ClCompile Include="lsm.cpp" />
@@ -130,6 +131,7 @@
     <ClCompile Include="Newton.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CIR.h" />
     <ClInclude Include="Hermite.h" />
     <ClInclude Include="lagrange.h" />
     <ClInclude Include="lsm.h" />

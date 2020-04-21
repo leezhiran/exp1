@@ -8,7 +8,7 @@ so.init()
 so.get_line.restype=ctypes.c_double
 so.get_line.argtype=[ctypes.c_double]
 print("f(55)")
-print(so.get_line(55))
+print(so.get_line(ctypes.c_double(55.0)))
 plt.figure(figsize=(10,5))
 x = np.linspace(0,100, 20000)
 list = []
